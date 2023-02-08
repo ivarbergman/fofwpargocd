@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: fofwp
+spec:
+  selector:
+    matchLabels:
+      app: fofwp
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: fofwp
+    spec:
+      containers:
+      - name: fofwp
+        image: ghcr.io/aventyret/fof-wp:2f6c9fc
+        ports:
+        - containerPort: 8080
