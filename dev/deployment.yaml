@@ -16,6 +16,6 @@ spec:
       - name: fofwp
         image: ghcr.io/aventyret/fof-wp:2f6c9fc
         ports:
-        - containerPort: 8080
+        - containerPort: 80
       imagePullSecrets:
       - name: dockerconfigjson-github-com    
